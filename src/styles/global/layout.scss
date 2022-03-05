@@ -1,0 +1,22 @@
+@use "../utils/breakpoints.scss" as *;
+
+.container {
+  margin: 0px auto;
+  max-width: 1440px;
+  padding: 0rem 1.5rem;
+  @include breakpoint(medium) {
+    padding: 0rem 2.5rem;
+  }
+}
+
+.hide-for-mobile {
+  @include breakpoint-down(small) {
+    display: none;
+  }
+}
+
+.hide-for-desktop {
+  @include breakpoint(medium) {
+    display: none;
+  }
+}

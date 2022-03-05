@@ -1,0 +1,162 @@
+@use "../utils/breakpoints.scss" as *;
+
+.header {
+  text-transform: uppercase;
+
+  .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1.5rem;
+
+    @include breakpoint(medium) {
+      margin-top: 0rem;
+    }
+
+    @include breakpoint(large) {
+      margin-top: 4rem;
+    }
+  }
+
+  c nav {
+    position: relative;
+    z-index: 1;
+  }
+
+  &__logo {
+    img {
+      height: 2.5rem;
+      width: 2.5rem;
+
+      @include breakpoint(medium) {
+        height: 3rem;
+        width: 3rem;
+      }
+    }
+  }
+
+  &__links {
+    position: relative;
+    padding: 1.5rem 0rem;
+
+    @include breakpoint(medium) {
+      padding: 2.5rem 0rem;
+    }
+
+    @include breakpoint(large) {
+      padding: 2.1875rem 0rem;
+    }
+
+    &::before {
+      content: "";
+      height: 100%;
+      width: 138%;
+      background: rgba(255, 255, 255, 0.039);
+      backdrop-filter: blur(5.09678rem);
+      position: absolute;
+      top: 0rem;
+      bottom: 0rem;
+      left: -3rem;
+      z-index: -1;
+
+      @include breakpoint(large) {
+        left: -7.5rem;
+      }
+    }
+    a {
+      font-size: 0.875rem;
+      color: var(--white);
+      letter-spacing: 0.14766rem;
+      position: relative;
+
+      &::before {
+        content: "";
+        left: 0;
+        right: 0;
+        bottom: -2.5rem;
+        height: 3px;
+        width: 100%;
+        background: var(--white);
+        display: block;
+        position: absolute;
+        opacity: 0;
+        transition: opacity 250ms ease-in-out;
+        @include breakpoint(large) {
+          bottom: -2.1875rem;
+        }
+      }
+
+      &:hover {
+        &::before {
+          opacity: 0.5;
+        }
+      }
+
+      &:not(:last-child) {
+        margin-right: 2.5rem;
+        @include breakpoint(large) {
+          margin-right: 3.125rem;
+        }
+      }
+
+      &.active {
+        &::before {
+          opacity: 1;
+        }
+      }
+
+      span {
+        display: none;
+        @include breakpoint(large) {
+          font-weight: bold;
+          display: inline;
+        }
+      }
+
+      @include breakpoint(large) {
+        font-size: 1rem;
+        letter-spacing: 0.16875rem;
+      }
+    }
+  }
+
+  &__toggle {
+    z-index: 2;
+  }
+
+  &__menu {
+    height: 100%;
+    width: 0rem;
+    position: fixed;
+    top: 0px;
+    right: 0;
+    overflow-x: hidden;
+    transition: 0.5s ease-in-out;
+    background: hsla(0, 0%, 100%, 0.039);
+    backdrop-filter: blur(81.5485px);
+
+    a {
+      font-size: 1rem;
+      line-height: 1.1875rem;
+      letter-spacing: 0.16875rem;
+      color: var(--white);
+      display: block;
+      margin-left: 2rem;
+      margin-bottom: 2rem;
+
+      &:first-child {
+        margin-top: 7.5rem;
+      }
+
+      span {
+        font-weight: bold;
+      }
+    }
+  }
+
+  &.active {
+    .header__menu {
+      width: 68%;
+    }
+  }
+}
