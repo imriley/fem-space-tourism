@@ -3,9 +3,12 @@ import logo from "../assets/shared/logo.svg";
 import hamburger from "../assets/shared/icon-hamburger.svg";
 import close from "../assets/shared/icon-close.svg";
 import { Link, useLocation } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import changePage from "../redux/action";
 
 export default function NavBar() {
   let location = useLocation();
+  let dispatch = useDispatch();
   const [active, setactive] = useState(false);
   const onClick = () => {
     setactive(!active);
@@ -18,16 +21,16 @@ export default function NavBar() {
             <img src={logo} alt="Space Tourism" />
           </Link>
           <div className="header__links hide-for-mobile">
-            <Link className={`${location.pathname === "/" ? "active" : ""}`} to="/">
+            <Link className={`${location.pathname === "/" ? "active" : ""}`} to="/" onClick={() => dispatch(changePage("home"))}>
               <span>00 </span>Home
             </Link>
-            <Link className={`${location.pathname === "/destination" ? "active" : ""}`} to="/">
+            <Link className={`${location.pathname === "/destination" ? "active" : ""}`} to="/destination" onClick={() => dispatch(changePage("destination"))}>
               <span>01 </span>Destination
             </Link>
-            <Link className={`${location.pathname === "/crew" ? "active" : ""}`} to="/">
+            <Link className={`${location.pathname === "/crew" ? "active" : ""}`} to="/crew">
               <span>02 </span>Crew
             </Link>
-            <Link className={`${location.pathname === "/technology" ? "active" : ""}`} to="/">
+            <Link className={`${location.pathname === "/technology" ? "active" : ""}`} to="/technology">
               <span>03 </span>Technology
             </Link>
           </div>
@@ -40,13 +43,13 @@ export default function NavBar() {
         <Link className={`${location.pathname === "/" ? "active" : ""}`} to="/">
           <span>00</span> Home
         </Link>
-        <Link className={`${location.pathname === "/destination" ? "active" : ""}`} to="/">
+        <Link className={`${location.pathname === "/destination" ? "active" : ""}`} to="/destination">
           <span>01</span> Destination
         </Link>
-        <Link className={`${location.pathname === "/crew" ? "active" : ""}`} to="/">
+        <Link className={`${location.pathname === "/crew" ? "active" : ""}`} to="/crew">
           <span>02</span> Crew
         </Link>
-        <Link className={`${location.pathname === "/technology" ? "active" : ""}`} to="/">
+        <Link className={`${location.pathname === "/technology" ? "active" : ""}`} to="/technology">
           <span>03</span> Technology
         </Link>
       </div>

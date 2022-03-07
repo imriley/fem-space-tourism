@@ -1,141 +1,125 @@
 @use "../utils/breakpoints.scss" as *;
 
-body {
-  width: 100%;
-  height: 100%;
-  min-height: 100vh;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-image: url("../../assets/home/background-home-mobile.jpg");
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: 3rem;
+  margin-bottom: 6.25rem;
   @include breakpoint(medium) {
-    background-image: url("../../assets/home/background-home-tablet.jpg");
+    margin-top: 6.625rem;
+    margin-bottom: 6.25rem;
   }
   @include breakpoint(large) {
-    background-image: url("../../assets/home/background-home-desktop.jpg");
+    margin: 0 auto;
+    max-width: 69.375rem;
+    justify-content: space-between;
+    margin: 0 auto;
+    flex-direction: row;
+    margin-top: 15.625rem;
+    margin-bottom: 6.25rem;
   }
 
-  .home {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    margin-top: 3rem;
-    margin-bottom: 6.25rem;
+  &__content {
     @include breakpoint(medium) {
-      margin-top: 6.625rem;
-      margin-bottom: 6.25rem;
+      text-align: left;
+      max-width: 28.5rem;
+      margin: 0 auto;
     }
     @include breakpoint(large) {
-      margin: 0 auto;
-      max-width: 69.375rem;
-      justify-content: space-between;
-      margin: 0 auto;
-      flex-direction: row;
-      margin-top: 15.625rem;
-      margin-bottom: 6.25rem;
+      margin: 0;
     }
+  }
 
-    &__content {
-      @include breakpoint(medium) {
-        text-align: left;
-        max-width: 28.5rem;
-        margin: 0 auto;
-      }
-      @include breakpoint(large) {
-        margin: 0;
-      }
+  &__subheading {
+    font-size: 1rem;
+    line-height: 1.1875rem;
+    letter-spacing: 0.16875rem;
+    color: var(--bwhite);
+    text-transform: uppercase;
+    @include breakpoint(medium) {
+      font-size: 1.25rem;
+      line-height: 1.5rem;
+      letter-spacing: 0.21125rem;
     }
+    @include breakpoint(large) {
+      font-size: 1.75rem;
+      line-height: 2.125rem;
+      letter-spacing: 0.29531rem;
+    }
+  }
 
-    &__subheading {
+  &__heading {
+    margin-top: 1rem;
+    margin-bottom: 2.625rem;
+    line-height: 9.375rem;
+    @include breakpoint-down(small) {
+      font-size: 5rem;
+      line-height: 6.25rem;
+      margin-top: 1.5rem;
+      margin-bottom: 3.4375rem;
+      letter-spacing: 0.21125rem;
+    }
+    @include breakpoint(large) {
+      line-height: 10.75rem;
+    }
+  }
+
+  &__body {
+    font-size: 0.9375rem;
+    line-height: 1.5625rem;
+    color: var(--bwhite);
+    letter-spacing: 0.07813rem;
+    @include breakpoint(medium) {
       font-size: 1rem;
-      line-height: 1.1875rem;
-      letter-spacing: 0.16875rem;
-      color: var(--bwhite);
-      text-transform: uppercase;
-      @include breakpoint(medium) {
-        font-size: 1.25rem;
-        line-height: 1.5rem;
-        letter-spacing: 0.21125rem;
-      }
-      @include breakpoint(large) {
-        font-size: 1.75rem;
-        line-height: 2.125rem;
-        letter-spacing: 0.29531rem;
-      }
+      line-height: 1.75rem;
     }
-
-    &__heading {
-      margin-top: 1rem;
-      margin-bottom: 2.625rem;
-      line-height: 9.375rem;
-      @include breakpoint-down(small) {
-        font-size: 5rem;
-        line-height: 6.25rem;
-        margin-top: 1.5rem;
-        margin-bottom: 3.4375rem;
-        letter-spacing: 0.21125rem;
-      }
-      @include breakpoint(large) {
-        line-height: 10.75rem;
-      }
+    @include breakpoint(large) {
+      font-size: 1.125rem;
+      line-height: 2rem;
     }
+  }
 
-    &__body {
-      font-size: 0.9375rem;
-      line-height: 1.5625rem;
-      color: var(--bwhite);
-      letter-spacing: 0.07813rem;
-      @include breakpoint(medium) {
-        font-size: 1rem;
-        line-height: 1.75rem;
-      }
-      @include breakpoint(large) {
-        font-size: 1.125rem;
-        line-height: 2rem;
-      }
+  &__btn {
+    position: relative;
+    height: 9.375rem;
+    width: 9.375rem;
+    @include breakpoint(medium) {
+      height: 15.125rem;
+      width: 15.125rem;
     }
-
-    &__btn {
+    @include breakpoint(large) {
+      height: 17.125rem;
+      width: 17.125rem;
+    }
+    a {
+      z-index: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
       position: relative;
-      height: 9.375rem;
-      width: 9.375rem;
+      justify-content: center;
+      align-items: center;
+      margin-top: 5rem;
+      font-size: 1.25rem;
+      line-height: 1.4375rem;
+      font-family: "Bellefair", serif;
+      letter-spacing: 0.07813rem;
+      text-transform: uppercase;
+      color: var(--darkblue);
+      border-radius: 50%;
+      background: var(--white);
+      transition: all 250ms ease-in-out;
       @include breakpoint(medium) {
-        height: 15.125rem;
-        width: 15.125rem;
+        font-size: 2rem;
+        letter-spacing: 0.125rem;
+        line-height: 2.29188rem;
       }
-      @include breakpoint(large) {
-        height: 17.125rem;
-        width: 17.125rem;
+      @include breakpoint(medium) {
       }
-      a {
-        z-index: 0;
-        width: 100%;
-        height: 100%;
-        display: flex;
-        position: relative;
-        justify-content: center;
-        align-items: center;
-        margin-top: 5rem;
-        font-size: 1.25rem;
-        line-height: 1.4375rem;
-        font-family: "Bellefair", serif;
-        letter-spacing: 0.07813rem;
-        text-transform: uppercase;
-        color: var(--darkblue);
-        border-radius: 50%;
-        background: var(--white);
-        transition: all 250ms ease-in-out;
-        @include breakpoint(medium) {
-          font-size: 2rem;
-          letter-spacing: 0.125rem;
-          line-height: 2.29188rem;
-        }
-        @include breakpoint(medium) {
-        }
-        &:hover {
-          box-shadow: 0rem 0rem 0rem 3rem rgb(255 255 255 / 14%);
-        }
+      &:hover {
+        box-shadow: 0rem 0rem 0rem 3rem rgb(255 255 255 / 14%);
       }
     }
   }
