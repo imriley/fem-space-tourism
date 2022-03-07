@@ -7,14 +7,14 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 1.5rem;
+    padding-top: 1.5rem;
 
     @include breakpoint(medium) {
-      margin-top: 0rem;
+      padding-top: 0rem;
     }
 
     @include breakpoint(large) {
-      margin-top: 4rem;
+      padding-top: 4rem;
     }
   }
 
@@ -57,7 +57,6 @@
       top: 0rem;
       bottom: 0rem;
       left: -3rem;
-      z-index: -1;
 
       @include breakpoint(large) {
         left: -7.5rem;
@@ -121,6 +120,7 @@
   }
 
   &__toggle {
+    cursor: pointer;
     z-index: 2;
   }
 

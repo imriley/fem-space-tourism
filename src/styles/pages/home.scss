@@ -5,20 +5,21 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  margin-top: 3rem;
-  margin-bottom: 6.25rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
   @include breakpoint(medium) {
-    margin-top: 6.625rem;
-    margin-bottom: 6.25rem;
+    padding-top: 6.625rem;
+    padding-bottom: 5.625rem;
   }
   @include breakpoint(large) {
     margin: 0 auto;
     max-width: 69.375rem;
     justify-content: space-between;
     margin: 0 auto;
+    align-items: end;
     flex-direction: row;
-    margin-top: 15.625rem;
-    margin-bottom: 6.25rem;
+    padding-top: 15.625rem;
+    padding-bottom: 8.125rem;
   }
 
   &__content {
@@ -85,6 +86,7 @@
     position: relative;
     height: 9.375rem;
     width: 9.375rem;
+    margin-top: 5rem;
     @include breakpoint(medium) {
       height: 15.125rem;
       width: 15.125rem;
@@ -101,7 +103,6 @@
       position: relative;
       justify-content: center;
       align-items: center;
-      margin-top: 5rem;
       font-size: 1.25rem;
       line-height: 1.4375rem;
       font-family: "Bellefair", serif;

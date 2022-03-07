@@ -1,8 +1,5 @@
-import React from 'react'
-import "../styles/pages/destination.scss";
+import React from "react";
 
 export default function Destination() {
-  return (
-    <div>Destination</div>
-  )
+  return <div>Destination</div>;
 }
