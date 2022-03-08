@@ -7,15 +7,16 @@ import { useSelector } from "react-redux";
 
 function App() {
   const page = useSelector((state) => state.Background);
-  console.log(page);
   return (
     <Router>
-      <div className={`container ${page}`}>
-        <Navbar />
-        <Routes>
-          <Route exact path="/" element={<Home />} />
-          <Route exact path="/destination" element={<Destination />} />
-        </Routes>
+      <div className={`page ${page}`}>
+        <div className={`container ${page}`}>
+          <Navbar />
+          <Routes>
+            <Route exact path="/" element={<Home />} />
+            <Route exact path="/destination" element={<Destination />} />
+          </Routes>
+        </div>
       </div>
     </Router>
   );

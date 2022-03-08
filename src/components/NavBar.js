@@ -13,6 +13,7 @@ export default function NavBar() {
   const onClick = () => {
     setactive(!active);
   };
+  
   return (
     <header className={`header ${active ? "active" : ""}`}>
       <nav className="navbar">

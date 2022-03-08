@@ -1,7 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import changePage from "../redux/action";
 
 export default function Home() {
+  let dispatch = useDispatch();
   return (
     <div className="home">
       <div className="home__content">
@@ -13,7 +16,9 @@ export default function Home() {
         </div>
       </div>
       <div className="home__btn">
-        <Link to="/">explore</Link>
+        <Link to="/destination" onClick={() => dispatch(changePage("destination"))}>
+          explore
+        </Link>
       </div>
     </div>
   );
