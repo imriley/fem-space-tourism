@@ -39,11 +39,11 @@ export default function Destination() {
   };
   return (
     <div className="destination">
-      <div className="destination__subheading">
+      <div className="destination__heading">
         <span>01</span> Pick your destination
       </div>
       <div className="destination__wrapper">
-        <img src={image} alt="" className="destination__image" />
+        <img src={image} alt={title} className="destination__image" />
         <div className="destination__content">
           <div className="destination__btns">
             <span className={`btn${title === "Moon" ? " active" : ""}`} onClick={() => changeData("moon")}>
@@ -59,7 +59,7 @@ export default function Destination() {
               Titan
             </span>
           </div>
-          <h3 className="destination__heading">{title}</h3>
+          <h3 className="destination__title">{title}</h3>
           <div className="destination__body">{description}</div>
           <div className="divider"></div>
           <div className="travel">

@@ -2,12 +2,17 @@
 
 .container {
   margin: 0px auto;
-  max-width: 1440px;
+  max-width: 1200px;
   padding: 0rem 1.5rem;
   @include breakpoint(medium) {
     padding: 0rem 2.5rem;
   }
-  
+}
+
+.divider {
+  height: 1px;
+  width: 100%;
+  background-color: var(--darkgrey);
 }
 
 .page {
@@ -33,6 +38,15 @@
     }
     @include breakpoint(large) {
       background-image: url("../../assets/destination/background-destination-desktop.jpg");
+    }
+  }
+  &.Crew {
+    background-image: url("../../assets/crew/background-crew-mobile.jpg");
+    @include breakpoint(medium) {
+      background-image: url("../../assets/crew/background-crew-tablet.jpg");
+    }
+    @include breakpoint(large) {
+      background-image: url("../../assets/crew/background-crew-desktop.jpg");
     }
   }
 }

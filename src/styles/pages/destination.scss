@@ -2,40 +2,40 @@
 
 .destination {
   text-align: center;
-  padding-bottom: 58px;
+  padding-bottom: 3.625rem;
   @include breakpoint(medium) {
-    padding-bottom: 62px;
+    padding-bottom: 3.875rem;
   }
 
-  &__subheading {
-    padding-top: 32px;
-    font-size: 16px;
-    line-height: 19px;
-    letter-spacing: 2.7px;
+  &__heading {
+    padding-top: 2rem;
+    font-size: 1rem;
+    line-height: 1.1875rem;
+    letter-spacing: 0.16875rem;
     text-transform: uppercase;
     span {
       font-weight: bold;
       mix-blend-mode: normal;
       opacity: 0.25;
-      margin-right: 18px;
+      margin-right: 1.125rem;
     }
     @include breakpoint(medium) {
-      padding-top: 40px;
-      font-size: 20px;
-      letter-spacing: 3.38px;
-      line-height: 24px;
+      padding-top: 2.5rem;
+      font-size: 1.25rem;
+      letter-spacing: 0.21125rem;
+      line-height: 1.5rem;
       text-align: left;
     }
     @include breakpoint(large) {
       margin: 0 auto;
-      max-width: 1047px;
+      max-width: 65.4375rem;
       position: relative;
-      font-size: 28px;
-      letter-spacing: 4.725px;
-      line-height: 34px;
+      font-size: 1.75rem;
+      letter-spacing: 0.29531rem;
+      line-height: 2.125rem;
       span {
         position: absolute;
-        left: -56px;
+        left: -3.5rem;
       }
     }
   }
@@ -43,7 +43,7 @@
   &__wrapper {
     @include breakpoint(large) {
       display: flex;
-      max-width: 1047px;
+      max-width: 65.4375rem;
       margin: 0 auto;
       align-items: flex-end;
     }
@@ -57,42 +57,42 @@
 
   &__image {
     width: 52%;
-    max-width: 300px;
+    max-width: 18.75rem;
     height: 52%;
-    max-height: 300px;
-    margin-top: 32px;
+    max-height: 18.75rem;
+    margin-top: 2rem;
     flex: 1;
     @include breakpoint(medium) {
-      margin-top: 60px;
+      margin-top: 3.75rem;
     }
     @include breakpoint(large) {
-      max-width: 445px;
-      max-height: 445px;
-      margin-right: 157px;
+      max-width: 27.8125rem;
+      max-height: 27.8125rem;
+      margin-right: 9.8125rem;
     }
   }
 
   &__btns {
-    padding-top: 26px;
-    font-size: 14px;
-    line-height: 17px;
-    letter-spacing: 2.3625px;
+    padding-top: 1.625rem;
+    font-size: 0.875rem;
+    line-height: 1.0625rem;
+    letter-spacing: 0.14766rem;
     text-transform: uppercase;
 
     @include breakpoint(medium) {
-      padding-top: 54px;
-      font-size: 16px;
-      line-height: 19px;
-      letter-spacing: 2.7px;
+      padding-top: 3.375rem;
+      font-size: 1rem;
+      line-height: 1.1875rem;
+      letter-spacing: 0.16875rem;
     }
 
     .btn {
       position: relative;
       cursor: pointer;
       &:not(:last-child) {
-        margin-right: 18px;
+        margin-right: 1.125rem;
         @include breakpoint(medium) {
-          margin-right: 36px;
+          margin-right: 2.25rem;
         }
       }
       &.active {
@@ -109,56 +109,51 @@
         content: "";
         position: absolute;
         width: 100%;
-        height: 3px;
+        height: 0.1875rem;
         background: var(--white);
-        bottom: -11px;
+        bottom: -0.6875rem;
         opacity: 0;
         transition: opacity 150ms ease-in-out;
       }
     }
   }
 
-  &__heading {
-    line-height: 64px;
-    margin-top: 24px;
-    margin-bottom: 0px;
+  &__title {
+    line-height: 4rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0rem;
     @include breakpoint(medium) {
-      margin-top: 32px;
-      font-size: 80px;
-      line-height: 92px;
+      margin-top: 2rem;
+      font-size: 5rem;
+      line-height: 5.75rem;
     }
     @include breakpoint(large) {
-      margin-top: 37px;
-      font-size: 100px;
-      line-height: 115px;
+      margin-top: 2.3125rem;
+      font-size: 6.25rem;
+      line-height: 7.1875rem;
     }
   }
 
   &__body {
-    font-size: 15px;
-    line-height: 25px;
+    font-size: 0.9375rem;
+    line-height: 1.5625rem;
     color: var(--bwhite);
-    padding-bottom: 32px;
+    padding-bottom: 2rem;
     @include breakpoint(medium) {
-      font-size: 16px;
-      line-height: 28px;
+      font-size: 1rem;
+      line-height: 1.75rem;
       margin: 0 auto;
       width: 74%;
-      margin-top: 8px;
-      padding-bottom: 50px;
+      margin-top: 0.5rem;
+      padding-bottom: 3.125rem;
     }
     @include breakpoint(large) {
       width: 100%;
-      margin-top: 42px;
-      font-size: 18px;
-      line-height: 32px;
-      padding-bottom: 54px;
+      margin-top: 2.625rem;
+      font-size: 1.125rem;
+      line-height: 2rem;
+      padding-bottom: 3.375rem;
     }
-  }
-  .divider {
-    height: 1px;
-    width: 100%;
-    background-color: var(--darkgrey);
   }
 
   .travel {
@@ -174,32 +169,32 @@
   &__distance,
   &__time {
     text-transform: uppercase;
-    padding-top: 32px;
+    padding-top: 2rem;
     @include breakpoint(medium) {
-      padding-top: 28px;
+      padding-top: 1.75rem;
     }
 
     .head {
-      font-size: 14px;
-      line-height: 16.8px;
-      left: 2.36px;
+      font-size: 0.875rem;
+      line-height: 1.05rem;
+      left: 0.1475rem;
       @include breakpoint(medium) {
-        letter-spacing: 2.3625px;
+        letter-spacing: 0.14766rem;
       }
     }
     .distance,
     .time {
-      padding-top: 12px;
-      line-height: 32.09px;
-      letter-spacing: 0px;
+      padding-top: 0.75rem;
+      line-height: 2.00563rem;
+      letter-spacing: 0rem;
     }
   }
   &__distance {
     @include breakpoint(medium) {
-      margin-right: 100px;
+      margin-right: 6.25rem;
     }
     @include breakpoint(large) {
-      margin-right: 80px;
+      margin-right: 5rem;
     }
   }
 }
