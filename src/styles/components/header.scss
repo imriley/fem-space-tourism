@@ -46,20 +46,21 @@
     @include breakpoint(large) {
       padding: 2.1875rem 0rem;
     }
+    @supports (backdrop-filter: blur(81.5485px)) {
+      &::before {
+        content: "";
+        height: 100%;
+        width: 200%;
+        background: rgba(255, 255, 255, 0.039);
+        backdrop-filter: blur(5.09678rem);
+        position: absolute;
+        top: 0rem;
+        bottom: 0rem;
+        left: -3rem;
 
-    &::before {
-      content: "";
-      height: 100%;
-      width: 200%;
-      background: rgba(255, 255, 255, 0.039);
-      backdrop-filter: blur(5.09678rem);
-      position: absolute;
-      top: 0rem;
-      bottom: 0rem;
-      left: -3rem;
-
-      @include breakpoint(large) {
-        left: -7.5rem;
+        @include breakpoint(large) {
+          left: -7.5rem;
+        }
       }
     }
     a {
@@ -135,6 +136,10 @@
     background: rgba(255, 255, 255, 0.04);
     backdrop-filter: blur(81.5485px);
     z-index: 1;
+    @supports not (backdrop-filter: blur(81.5485px)) {
+      background: var(--darkblue);
+      background: rgb(11, 13, 23, 0.75);
+    }
 
     a {
       font-size: 1rem;
