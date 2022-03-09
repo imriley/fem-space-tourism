@@ -37,7 +37,7 @@ export default function Crew() {
   };
 
   return (
-    <div className="crew">
+    <main className="crew">
       <div className="crew__heading">
         <span>02</span>Meet your crew
       </div>
@@ -60,6 +60,6 @@ export default function Crew() {
           <div className="divider hide-for-desktop"></div>
         </div>
       </div>
-    </div>
+    </main>
   );
 }

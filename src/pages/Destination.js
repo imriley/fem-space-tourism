@@ -38,7 +38,7 @@ export default function Destination() {
     setTravel(planet.travel);
   };
   return (
-    <div className="destination">
+    <main className="destination">
       <div className="destination__heading">
         <span>01</span> Pick your destination
       </div>
@@ -74,6 +74,6 @@ export default function Destination() {
           </div>
         </div>
       </div>
-    </div>
+    </main>
   );
 }

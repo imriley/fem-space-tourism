@@ -6,7 +6,7 @@ import changePage from "../redux/action";
 export default function Home() {
   let dispatch = useDispatch();
   return (
-    <div className="home">
+    <main className="home">
       <div className="home__content">
         <div className="home__subheading">So, you want to travel to</div>
         <h1 className="home__heading">Space</h1>
@@ -20,6 +20,6 @@ export default function Home() {
           explore
         </Link>
       </div>
-    </div>
+    </main>
   );
 }

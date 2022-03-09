@@ -11,7 +11,7 @@ export default function Technology() {
     setDescription(newTech.description);
   };
   return (
-    <div className="technology">
+    <main className="technology">
       <div className="technology__heading">
         <span>03</span>Space Launch 101
       </div>
@@ -36,6 +36,6 @@ export default function Technology() {
           </div>
         </div>
       </div>
-    </div>
+    </main>
   );
 }
